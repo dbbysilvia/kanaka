@@ -1,2 +1,2 @@
 # kanaka
-Online Shop - Kanaka
+Online Shop
