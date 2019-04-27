@@ -29,3 +29,8 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-project
 /tests/tests/
 /tests/results/
+# Object file
+*.o
+
+# Ada Library Information
+*.ali
