@@ -119,3 +119,59 @@ $route['master/brand/excel']	= 'brand/brands/excel';
 $route['master/area'] = 'area/areas/index';
 $route['master/area/pdf']	= 'area/areas/pdf';
 $route['master/area/excel']	= 'area/areas/excel';
+
+/**
+* PRODUCT
+*/
+$route['master/product'] = 'product/products/index';
+$route['master/product/pdf']	= 'product/products/pdf';
+$route['master/product/excel']	= 'product/products/excel';
+
+/**
+* DIPO
+*/
+$route['master/dipo'] = 'dipo/dipos/index';
+$route['master/dipo/pdf']	= 'dipo/dipos/pdf';
+$route['master/dipo/excel']	= 'dipo/dipos/excel';
+
+/**
+* PARTNER
+*/
+$route['master/partner'] = 'partner/partners/index';
+$route['master/partner/pdf']	= 'partner/partners/pdf';
+$route['master/partner/excel']	= 'partner/partners/excel';
+
+/**
+* TRANSFER
+*/
+$route['master/transfer'] = 'transfer/transfers/index';
+$route['master/transfer/pdf']	= 'transfer/transfers/pdf';
+$route['master/transfer/excel']	= 'transfer/transfers/excel';
+
+/**
+* CUSTOMER REPORT
+*/
+$route['report/customer'] = 'customer/customers/index';
+$route['report/customer/pdf']	= 'customer/customers/pdf';
+$route['report/customer/excel']	= 'customer/customers/excel';
+
+/**
+* COMPANY REPORT
+*/
+$route['report/company'] = 'company/companies/index';
+$route['report/company/pdf']	= 'company/companies/pdf';
+$route['report/company/excel']	= 'company/companies/excel';
+
+/**
+* DIPO REPORT
+*/
+$route['report/dipo_report'] = 'dipo_report/dipo_reports/index';
+$route['report/dipo_report/pdf']	= 'dipo_report/dipo_reports/pdf';
+$route['report/dipo_report/excel']	= 'dipo_report/dipo_reports/excel';
+
+/**
+* PARTNER REPORT
+*/
+$route['report/partner'] = 'partner/partners/index';
+$route['report/partner/pdf']	= 'partner/partners/pdf';
+$route['report/partner/excel']	= 'partner/partners/excel';
