@@ -65,10 +65,10 @@
                                     <a href="{{ base_url() }}profile">
                                         <i class="icon-user"></i> {{ lang('my_profile') }} </a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="{{ base_url() }}notification">
                                         <i class="icon-bell"></i> {{ lang('notif_event') }} </a>
-                                </li>
+                                </li> -->
                                 <li>
                                     <a href="{{ base_url() }}logout">
                                         <i class="icon-key"></i> {{ lang('logout') }} </a>

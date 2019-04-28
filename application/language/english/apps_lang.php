@@ -166,3 +166,93 @@ $lang['area_name'] = "Area Name";
 $lang['saving_area_successfully'] = 'Saving data Area succesfully';
 $lang['deleting_area_successfully'] = 'Deleting data Area succesfully';
 ## END Area ##
+
+## Product ##
+$lang['product'] = 'Product';
+$lang['new_product'] = "New Product";
+$lang['edit_product'] = "Edit Product";
+$lang['product_name'] = "Product Name";
+$lang['saving_product_successfully'] = 'Saving data Product succesfully';
+$lang['deleting_product_successfully'] = 'Deleting data Product succesfully';
+## END Product ##
+
+## DIPO ##
+$lang['dipo'] = 'DIPO';
+$lang['new_dipo'] = "New DIPO";
+$lang['edit_dipo'] = "Edit DIPO";
+$lang['dipo_name'] = "DIPO Name";
+$lang['saving_dipo_successfully'] = 'Saving data DIPO succesfully';
+$lang['deleting_dipo_successfully'] = 'Deleting data DIPO succesfully';
+## END DIPO ##
+
+## Partner ##
+$lang['partner'] = 'Partner';
+$lang['new_partner'] = "New Partner";
+$lang['edit_partner'] = "Edit Partner";
+$lang['partner_name'] = "Partner Name";
+$lang['saving_partner_successfully'] = 'Saving data Partner succesfully';
+$lang['deleting_partner_successfully'] = 'Deleting data Partner succesfully';
+## END Partner ##
+
+## Transfer ##
+$lang['transfer'] = 'Transfer';
+$lang['new_transfer'] = "New Transfer";
+$lang['edit_transfer'] = "Edit Transfer";
+$lang['transfer_name'] = "Transfer Name";
+$lang['saving_transfer_successfully'] = 'Saving data Transfer succesfully';
+$lang['deleting_transfer_successfully'] = 'Deleting data Transfer succesfully';
+## END Transfer ##
+
+## Admin ##
+$lang['admin'] = 'Admin';
+$lang['new_admin'] = "New Admin";
+$lang['edit_admin'] = "Edit Admin";
+$lang['admin_name'] = "Admin Name";
+$lang['saving_admin_successfully'] = 'Saving data Admin succesfully';
+$lang['deleting_admin_successfully'] = 'Deleting data Admin succesfully';
+## END Admin ##
+
+## Blog ##
+$lang['blog'] = 'Blog';
+$lang['new_blog'] = "New Blog";
+$lang['edit_blog'] = "Edit Blog";
+$lang['blog_name'] = "Blog Name";
+$lang['saving_blog_successfully'] = 'Saving data Blog succesfully';
+$lang['deleting_blog_successfully'] = 'Deleting data Blog succesfully';
+## END Blog ##
+
+## Customer ##
+$lang['customer'] = 'Customer';
+$lang['new_customer'] = "New Customer";
+$lang['edit_customer'] = "Edit Customer";
+$lang['customer_name'] = "Customer Name";
+$lang['saving_customer_successfully'] = 'Saving data Customer succesfully';
+$lang['deleting_customer_successfully'] = 'Deleting data Customer succesfully';
+## END Customer ##
+
+## Company ##
+$lang['company'] = 'Company';
+$lang['new_company'] = "New Company";
+$lang['edit_company'] = "Edit Company";
+$lang['company_name'] = "Company Name";
+$lang['saving_company_successfully'] = 'Saving data Company succesfully';
+$lang['deleting_company_successfully'] = 'Deleting data Company succesfully';
+## END Company ##
+
+## DIPO Report ##
+$lang['dipo_report'] = 'DIPO';
+$lang['new_dipo_report'] = "New DIPO";
+$lang['edit_dipo_report'] = "Edit DIPO";
+$lang['dipo_report_name'] = "DIPO Name";
+$lang['saving_dipo_report_successfully'] = 'Saving data DIPO succesfully';
+$lang['deleting_dipo_report_successfully'] = 'Deleting data DIPO succesfully';
+## END DIPO Report ##
+
+## Partner Report ##
+$lang['partner_report'] = 'Partner';
+$lang['new_partner_report'] = "New Partner";
+$lang['edit_partner_report'] = "Edit Partner";
+$lang['partner_report_name'] = "Partner Name";
+$lang['saving_partner_report_successfully'] = 'Saving data Partner succesfully';
+$lang['deleting_partner_report_successfully'] = 'Deleting data Partner succesfully';
+## END Partner Report ##

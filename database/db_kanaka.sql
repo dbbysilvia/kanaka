@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50611
 File Encoding         : 65001
 
-Date: 2019-04-28 00:42:52
+Date: 2019-04-28 20:43:52
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -64,6 +64,7 @@ INSERT INTO `app_sessions` VALUES ('9c6km8h3e9uths8199e2ahdfp59m36vd', '::1', '1
 INSERT INTO `app_sessions` VALUES ('db0ucv97d6f53qu319oh5ekqtrip169g', '::1', '1556385024', 0x5F5F63695F6C6173745F726567656E65726174657C693A313535363338313033373B7265717565737465645F706167657C733A32383A22687474703A2F2F6C6F63616C686F73742F74656D706C6174655F312F223B70726576696F75735F706167657C733A32383A22687474703A2F2F6C6F63616C686F73742F74656D706C6174655F312F223B6964656E746974797C733A353A2261646D696E223B757365726E616D657C733A353A2261646D696E223B656D61696C7C733A32333A226F6374617669616E393130313140676D61696C2E636F6D223B757365725F69647C733A313A2231223B6F6C645F6C6173745F6C6F67696E7C733A31303A2231353536333830313538223B6C6173745F636865636B7C693A313535363338313034333B);
 INSERT INTO `app_sessions` VALUES ('0h9f8f4mg9377tk424doc97jmk8aiedg', '::1', '1556386920', 0x5F5F63695F6C6173745F726567656E65726174657C693A313535363338353036323B7265717565737465645F706167657C733A34353A22687474703A2F2F6C6F63616C686F73742F6B616E616B612F6C6F67732F66657463682D646174612D67726F7570223B70726576696F75735F706167657C733A34353A22687474703A2F2F6C6F63616C686F73742F6B616E616B612F6C6F67732F66657463682D646174612D67726F7570223B6964656E746974797C733A353A2261646D696E223B757365726E616D657C733A353A2261646D696E223B656D61696C7C733A32333A226F6374617669616E393130313140676D61696C2E636F6D223B757365725F69647C733A313A2231223B6F6C645F6C6173745F6C6F67696E7C733A31303A2231353536333831303433223B6C6173745F636865636B7C693A313535363338353236393B);
 INSERT INTO `app_sessions` VALUES ('v66kgqs4e55hoqvoruj6hi60ka8pu2jl', '::1', '1556386956', 0x5F5F63695F6C6173745F726567656E65726174657C693A313535363338363934313B7265717565737465645F706167657C733A34353A22687474703A2F2F6C6F63616C686F73742F6B616E616B612F6C6F67732F66657463682D646174612D67726F7570223B70726576696F75735F706167657C733A34353A22687474703A2F2F6C6F63616C686F73742F6B616E616B612F6C6F67732F66657463682D646174612D67726F7570223B6964656E746974797C733A32323A226D697472615F62657261735F6A6174696E6567617261223B757365726E616D657C733A32323A226D697472615F62657261735F6A6174696E6567617261223B656D61696C7C733A33333A226D697472615F62657261735F6A6174696E6567617261406B616E616B612E636F6D223B757365725F69647C733A313A2238223B6F6C645F6C6173745F6C6F67696E7C733A31303A2231353536333836353935223B6C6173745F636865636B7C693A313535363338363935313B);
+INSERT INTO `app_sessions` VALUES ('nme3saspn1t016jp2aa39q296v5m3af4', '::1', '1556458998', 0x5F5F63695F6C6173745F726567656E65726174657C693A313535363435343935393B7265717565737465645F706167657C733A34363A22687474703A2F2F6C6F63616C686F73742F6B616E616B612F6D61737465722F6D656E752F66657463682D64617461223B70726576696F75735F706167657C733A34363A22687474703A2F2F6C6F63616C686F73742F6B616E616B612F6D61737465722F6D656E752F66657463682D64617461223B6964656E746974797C733A353A2261646D696E223B757365726E616D657C733A353A2261646D696E223B656D61696C7C733A31363A2261646D696E406B616E616B612E636F6D223B757365725F69647C733A313A2231223B6F6C645F6C6173745F6C6F67696E7C733A31303A2231353536333836353030223B6C6173745F636865636B7C693A313535363435343937373B);
 
 -- ----------------------------
 -- Table structure for company
@@ -157,12 +158,11 @@ CREATE TABLE `login_attempts` (
   `login` varchar(100) NOT NULL,
   `time` int(11) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of login_attempts
 -- ----------------------------
-INSERT INTO `login_attempts` VALUES ('8', '::1', 'fajar', '1556325985');
 
 -- ----------------------------
 -- Table structure for logs
@@ -180,7 +180,7 @@ CREATE TABLE `logs` (
   `type` int(11) NOT NULL,
   PRIMARY KEY (`id_logs`),
   KEY `users_id` (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=157 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=182 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of logs
@@ -341,6 +341,31 @@ INSERT INTO `logs` VALUES ('153', '1', '{\"User\":\"Mitra Beras Jatinegara\",\"M
 INSERT INTO `logs` VALUES ('154', '1', '{\"User\":\"Mitra Beras Jatinegara\",\"Menu\":\"Transaction\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', null, null, 'Add user menu Mitra Beras Jatinegara succesfully by PT Kanaka', '2019-04-28 00:39:43', 'C', '3');
 INSERT INTO `logs` VALUES ('155', '1', '{\"Menu\":\"Reports\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', '{\"Menu\":\"Users\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', '{\"Menu\":\"Reports\"}', 'Update user menu DIPO Jatinegara succesfully by PT Kanaka', '2019-04-28 00:40:47', 'U', '3');
 INSERT INTO `logs` VALUES ('156', '1', '{\"Menu\":\"Area\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', '{\"Menu\":\"Menus\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', '{\"Menu\":\"Area\"}', 'Update user menu DIPO Jatinegara succesfully by PT Kanaka', '2019-04-28 00:41:10', 'U', '3');
+INSERT INTO `logs` VALUES ('157', '1', '{\"Menu Code\":\"8\",\"Menu Name\":\"Product\",\"Menu Link\":\"product\",\"Lang\":\"product\",\"Parent Menu\":\"Master\",\"Status\":\"Active\"}', null, null, 'Add menu Product succesfully by PT Kanaka', '2019-04-28 20:19:00', 'C', '1');
+INSERT INTO `logs` VALUES ('158', '1', null, '{\"Menu Code\":6,\"Menu Name\":\"Brand\",\"Menu Link\":\"brand\",\"Lang\":\"brand\",\"Parent Menu\":\"Master\",\"Status\":\"Not Active\"}', null, 'Delete menu Brand succesfully by PT Kanaka', '2019-04-28 20:19:05', 'D', '1');
+INSERT INTO `logs` VALUES ('159', '1', null, '{\"Menu Code\":7,\"Menu Name\":\"Area\",\"Menu Link\":\"area\",\"Lang\":\"area\",\"Parent Menu\":\"Master\",\"Status\":\"Not Active\"}', null, 'Delete menu Area succesfully by PT Kanaka', '2019-04-28 20:19:11', 'D', '1');
+INSERT INTO `logs` VALUES ('160', '1', '{\"Menu Code\":\"9\",\"Menu Name\":\"DIPO\",\"Menu Link\":\"dipo\",\"Lang\":\"dipo\",\"Parent Menu\":\"Master\",\"Status\":\"Active\"}', null, null, 'Add menu DIPO succesfully by PT Kanaka', '2019-04-28 20:19:30', 'C', '1');
+INSERT INTO `logs` VALUES ('161', '1', '{\"Menu Code\":\"10\",\"Menu Name\":\"Partner\",\"Menu Link\":\"partner\",\"Lang\":\"partner\",\"Parent Menu\":\"Master\",\"Status\":\"Active\"}', null, null, 'Add menu Partner succesfully by PT Kanaka', '2019-04-28 20:19:55', 'C', '1');
+INSERT INTO `logs` VALUES ('162', '1', '{\"Menu Code\":\"11\",\"Menu Name\":\"Transfer\",\"Menu Link\":\"transfer\",\"Lang\":\"transfer\",\"Parent Menu\":\"Master\",\"Status\":\"Active\"}', null, null, 'Add menu Transfer succesfully by PT Kanaka', '2019-04-28 20:20:13', 'C', '1');
+INSERT INTO `logs` VALUES ('163', '1', null, '{\"Menu Code\":2,\"Menu Name\":\"Transaction\",\"Menu Link\":\"transaction\",\"Lang\":\"transaction\",\"Parent Menu\":\"-\",\"Status\":\"Not Active\"}', null, 'Delete menu Transaction succesfully by PT Kanaka', '2019-04-28 20:20:27', 'D', '1');
+INSERT INTO `logs` VALUES ('164', '1', '{\"Menu Code\":\"12\",\"Menu Name\":\"Customer\",\"Menu Link\":\"customer\",\"Lang\":\"customer\",\"Parent Menu\":\"Reports\",\"Status\":\"Active\"}', null, null, 'Add menu Customer succesfully by PT Kanaka', '2019-04-28 20:21:08', 'C', '1');
+INSERT INTO `logs` VALUES ('165', '1', '{\"Menu Code\":\"13\",\"Menu Name\":\"Company\",\"Menu Link\":\"company\",\"Lang\":\"company\",\"Parent Menu\":\"Reports\",\"Status\":\"Active\"}', null, null, 'Add menu Company succesfully by PT Kanaka', '2019-04-28 20:21:29', 'C', '1');
+INSERT INTO `logs` VALUES ('166', '1', '{\"Menu Code\":\"14\",\"Menu Name\":\"DIPO\",\"Menu Link\":\"dipo_report\",\"Lang\":\"dipo_report\",\"Parent Menu\":\"Reports\",\"Status\":\"Active\"}', null, null, 'Add menu DIPO succesfully by PT Kanaka', '2019-04-28 20:22:00', 'C', '1');
+INSERT INTO `logs` VALUES ('167', '1', '{\"Menu Code\":\"15\",\"Menu Name\":\"Partner\",\"Menu Link\":\"partner_report\",\"Lang\":\"partner_report\",\"Parent Menu\":\"Reports\",\"Status\":\"Active\"}', null, null, 'Add menu Partner succesfully by PT Kanaka', '2019-04-28 20:22:20', 'C', '1');
+INSERT INTO `logs` VALUES ('168', '1', '{\"Menu Code\":\"16\",\"Menu Name\":\"Admin\",\"Menu Link\":\"admin\",\"Lang\":\"admin\",\"Parent Menu\":\"-\",\"Status\":\"Active\"}', null, null, 'Add menu Admin succesfully by PT Kanaka', '2019-04-28 20:22:36', 'C', '1');
+INSERT INTO `logs` VALUES ('169', '1', '{\"Menu Code\":\"17\",\"Menu Name\":\"Blog\",\"Menu Link\":\"blog\",\"Lang\":\"blog\",\"Parent Menu\":\"-\",\"Status\":\"Active\"}', null, null, 'Add menu Blog succesfully by PT Kanaka', '2019-04-28 20:22:47', 'C', '1');
+INSERT INTO `logs` VALUES ('170', '1', '{\"Menu Code\":\"14\",\"Menu Name\":\"DIPO Report\",\"Menu Link\":\"dipo_report\",\"Lang\":\"dipo_report\",\"Parent Menu\":\"Reports\",\"Status\":\"Active\"}', '{\"Menu Code\":14,\"Menu Name\":\"DIPO\",\"Menu Link\":\"dipo_report\",\"Lang\":\"dipo_report\",\"Parent Menu\":\"Reports\",\"Status\":\"Active\"}', '{\"Menu Name\":\"DIPO Report\"}', 'Update menu DIPO Report succesfully by PT Kanaka', '2019-04-28 20:23:40', 'U', '1');
+INSERT INTO `logs` VALUES ('171', '1', '{\"Menu Code\":\"15\",\"Menu Name\":\"Partner Report\",\"Menu Link\":\"partner_report\",\"Lang\":\"partner_report\",\"Parent Menu\":\"Reports\",\"Status\":\"Active\"}', '{\"Menu Code\":15,\"Menu Name\":\"Partner\",\"Menu Link\":\"partner_report\",\"Lang\":\"partner_report\",\"Parent Menu\":\"Reports\",\"Status\":\"Active\"}', '{\"Menu Name\":\"Partner Report\"}', 'Update menu Partner Report succesfully by PT Kanaka', '2019-04-28 20:23:51', 'U', '1');
+INSERT INTO `logs` VALUES ('172', '1', '{\"Menu\":\"Customer\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', '{\"Menu\":\"Area\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"Yes\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', '{\"Menu\":\"Customer\",\"Print Limited\":\"No\"}', 'Update user menu PT Kanaka succesfully by PT Kanaka', '2019-04-28 20:24:19', 'U', '3');
+INSERT INTO `logs` VALUES ('173', '1', '{\"Menu\":\"Company\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', '{\"Menu\":\"Transaction\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', '{\"Menu\":\"Company\"}', 'Update user menu PT Kanaka succesfully by PT Kanaka', '2019-04-28 20:24:31', 'U', '3');
+INSERT INTO `logs` VALUES ('174', '1', '{\"User\":\"PT Kanaka\",\"Menu\":\"DIPO Report\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', null, null, 'Add user menu PT Kanaka succesfully by PT Kanaka', '2019-04-28 20:24:53', 'C', '3');
+INSERT INTO `logs` VALUES ('175', '1', '{\"Menu\":\"Partner Report\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', '{\"Menu\":\"Brand\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', '{\"Menu\":\"Partner Report\"}', 'Update user menu PT Kanaka succesfully by PT Kanaka', '2019-04-28 20:25:19', 'U', '3');
+INSERT INTO `logs` VALUES ('176', '1', '{\"User\":\"PT Kanaka\",\"Menu\":\"Product\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', null, null, 'Add user menu PT Kanaka succesfully by PT Kanaka', '2019-04-28 20:26:07', 'C', '3');
+INSERT INTO `logs` VALUES ('177', '1', '{\"User\":\"PT Kanaka\",\"Menu\":\"DIPO\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', null, null, 'Add user menu PT Kanaka succesfully by PT Kanaka', '2019-04-28 20:26:30', 'C', '3');
+INSERT INTO `logs` VALUES ('178', '1', '{\"User\":\"PT Kanaka\",\"Menu\":\"Partner\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', null, null, 'Add user menu PT Kanaka succesfully by PT Kanaka', '2019-04-28 20:26:47', 'C', '3');
+INSERT INTO `logs` VALUES ('179', '1', '{\"User\":\"PT Kanaka\",\"Menu\":\"Transfer\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', null, null, 'Add user menu PT Kanaka succesfully by PT Kanaka', '2019-04-28 20:26:57', 'C', '3');
+INSERT INTO `logs` VALUES ('180', '1', '{\"User\":\"PT Kanaka\",\"Menu\":\"Admin\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', null, null, 'Add user menu PT Kanaka succesfully by PT Kanaka', '2019-04-28 20:27:12', 'C', '3');
+INSERT INTO `logs` VALUES ('181', '1', '{\"User\":\"PT Kanaka\",\"Menu\":\"Blog\",\"Availabled\":\"Yes\",\"Created\":\"Yes\",\"Viewed\":\"Yes\",\"Updated\":\"Yes\",\"Deleted\":\"Yes\",\"Approved\":\"Yes\",\"Verified\":\"Yes\",\"Fullaccess\":\"Yes\",\"Print Limited\":\"No\",\"Print Unlimited\":\"Yes\",\"Status Usermenu\":\"Active\"}', null, null, 'Add user menu PT Kanaka succesfully by PT Kanaka', '2019-04-28 20:27:21', 'C', '3');
 
 -- ----------------------------
 -- Table structure for menu
@@ -358,18 +383,28 @@ CREATE TABLE `menu` (
   `date_created` datetime DEFAULT NULL,
   `date_modified` datetime DEFAULT NULL,
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of menu
 -- ----------------------------
-INSERT INTO `menu` VALUES ('1', '1', 'Master', 'master', 'icon-grid', '0', 'master', '1', '2019-04-25 01:16:17', '2019-04-27 23:54:40');
-INSERT INTO `menu` VALUES ('2', '2', 'Transaction', 'transaction', 'icon-briefcase', '0', 'transaction', '1', null, null);
-INSERT INTO `menu` VALUES ('3', '3', 'Reports', 'reports', 'icon-notebook', '0', 'reports', '1', null, '2017-10-11 15:45:49');
-INSERT INTO `menu` VALUES ('4', '4', 'Menus', 'menu', null, '1', 'menus', '1', null, null);
-INSERT INTO `menu` VALUES ('5', '5', 'Users', 'users/account', null, '1', 'users', '1', null, null);
-INSERT INTO `menu` VALUES ('6', '6', 'Brand', 'brand', 'icon-clock', '1', 'brand', '1', '2017-10-11 17:02:05', '2017-10-31 09:50:36');
-INSERT INTO `menu` VALUES ('7', '7', 'Area', 'area', null, '1', 'area', '1', '2018-12-13 10:27:48', '2019-04-27 07:52:18');
+INSERT INTO `menu` VALUES ('1', '2', 'Master', 'master', 'icon-grid', '0', 'master', '1', '2019-04-25 01:16:17', '2019-04-27 23:54:40');
+INSERT INTO `menu` VALUES ('2', '2', 'Transaction', 'transaction', 'icon-briefcase', '0', 'transaction', '0', null, null);
+INSERT INTO `menu` VALUES ('3', '1', 'Reports', 'reports', 'icon-notebook', '0', 'reports', '1', null, '2017-10-11 15:45:49');
+INSERT INTO `menu` VALUES ('4', '14', 'Menus', 'menu', null, '1', 'menus', '1', null, null);
+INSERT INTO `menu` VALUES ('5', '13', 'Users', 'users/account', null, '1', 'users', '1', null, null);
+INSERT INTO `menu` VALUES ('6', '6', 'Brand', 'brand', 'icon-clock', '1', 'brand', '0', '2017-10-11 17:02:05', '2017-10-31 09:50:36');
+INSERT INTO `menu` VALUES ('7', '7', 'Area', 'area', null, '1', 'area', '0', '2018-12-13 10:27:48', '2019-04-27 07:52:18');
+INSERT INTO `menu` VALUES ('8', '9', 'Product', 'product', null, '1', 'product', '1', '2019-04-28 20:19:00', '2019-04-28 20:19:00');
+INSERT INTO `menu` VALUES ('9', '10', 'DIPO', 'dipo', null, '1', 'dipo', '1', '2019-04-28 20:19:30', '2019-04-28 20:19:30');
+INSERT INTO `menu` VALUES ('10', '11', 'Partner', 'partner', null, '1', 'partner', '1', '2019-04-28 20:19:55', '2019-04-28 20:19:55');
+INSERT INTO `menu` VALUES ('11', '12', 'Transfer', 'transfer', null, '1', 'transfer', '1', '2019-04-28 20:20:13', '2019-04-28 20:20:13');
+INSERT INTO `menu` VALUES ('12', '5', 'Customer', 'customer', null, '3', 'customer', '1', '2019-04-28 20:21:08', '2019-04-28 20:21:08');
+INSERT INTO `menu` VALUES ('13', '6', 'Company', 'company', null, '3', 'company', '1', '2019-04-28 20:21:29', '2019-04-28 20:21:29');
+INSERT INTO `menu` VALUES ('14', '7', 'DIPO Report', 'dipo_report', null, '3', 'dipo_report', '1', '2019-04-28 20:22:00', '2019-04-28 20:23:40');
+INSERT INTO `menu` VALUES ('15', '8', 'Partner Report', 'partner_report', null, '3', 'partner_report', '1', '2019-04-28 20:22:20', '2019-04-28 20:23:51');
+INSERT INTO `menu` VALUES ('16', '4', 'Admin', 'admin', 'icon-users', '0', 'admin', '1', '2019-04-28 20:22:36', '2019-04-28 20:22:36');
+INSERT INTO `menu` VALUES ('17', '3', 'Blog', 'blog', 'icon-feed', '0', 'blog', '1', '2019-04-28 20:22:47', '2019-04-28 20:22:47');
 
 -- ----------------------------
 -- Table structure for m_area
@@ -538,7 +573,7 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', '127.0.0.1', 'admin', '$2y$08$9LW7MTZlxDHExxeL2RowqOzwj8HfP5t1Y6yGw.KH7Wdou1ddPV49G', '5f4dcc3b5aa765d61d8327deb882cf99', '', 'admin@kanaka.com', '', null, null, null, '1268889823', '1556386500', '1', 'Kanaka', 'Indonesia', 'PT Kanaka', 'PT Kanaka', '+62878987654321', 'Jalan Sudirman No 1', '0', '1', 'Jakarta Selatan', null, 'default_avatar.jpg', '2019-04-28 00:25:43');
+INSERT INTO `users` VALUES ('1', '127.0.0.1', 'admin', '$2y$08$9LW7MTZlxDHExxeL2RowqOzwj8HfP5t1Y6yGw.KH7Wdou1ddPV49G', '5f4dcc3b5aa765d61d8327deb882cf99', '', 'admin@kanaka.com', '', null, null, null, '1268889823', '1556454977', '1', 'Kanaka', 'Indonesia', 'PT Kanaka', 'PT Kanaka', '+62878987654321', 'Jalan Sudirman No 1', '0', '1', 'Jakarta Selatan', null, 'default_avatar.jpg', '2019-04-28 00:25:43');
 INSERT INTO `users` VALUES ('2', '127.0.0.1', 'dipo_jatinegara', '$2y$08$yESv9EQ/YDTZxfxODayOp.4VgHHD8DshNLOVri.PjnWK2WkCAi7SG', '5f4dcc3b5aa765d61d8327deb882cf99', null, 'dipo-jatinegara@kanaka.com', null, null, null, null, '0', '1556386731', '1', 'DIPO', 'Jatinegara', 'DIPO Jatinegara', 'PT Kanaka', '085123567123', 'Jalan Jatinegara 12', '0', '2', 'Jakarta Timur', null, 'default_avatar.jpg', '2019-04-28 00:25:43');
 INSERT INTO `users` VALUES ('8', '127.0.0.1', 'mitra_beras_jatinegara', '$2y$08$cWRlP6Yswl35eoc7G49M8.nrWvZ4yBInAaj72W0pcVIch.W8Iwjui', '', null, 'mitra_beras_jatinegara@kanaka.com', null, null, null, null, '1556385943', '1556386951', '1', 'Mitra Beras', 'Jatinegara', 'Mitra Beras Jatinegara', 'PT Kanaka', '0212378176', 'Jalan Jatinegara 50', '0', '3', null, null, 'default_avatar.jpg', '2019-04-28 00:25:43');
 
@@ -586,22 +621,29 @@ CREATE TABLE `users_menu` (
   `StatusUsermenu` enum('0','1') NOT NULL,
   PRIMARY KEY (`id_user_menu`),
   UNIQUE KEY `key01` (`user_id`,`menu_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of users_menu
 -- ----------------------------
 INSERT INTO `users_menu` VALUES ('1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
-INSERT INTO `users_menu` VALUES ('2', '1', '2', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
+INSERT INTO `users_menu` VALUES ('2', '1', '13', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
 INSERT INTO `users_menu` VALUES ('3', '1', '3', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
 INSERT INTO `users_menu` VALUES ('4', '1', '4', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
 INSERT INTO `users_menu` VALUES ('5', '1', '5', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
-INSERT INTO `users_menu` VALUES ('6', '1', '6', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
+INSERT INTO `users_menu` VALUES ('6', '1', '15', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
 INSERT INTO `users_menu` VALUES ('7', '2', '1', '0', '0', '0', '0', '0', '0', '0', '0', '1', '0', '1');
 INSERT INTO `users_menu` VALUES ('8', '2', '2', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
 INSERT INTO `users_menu` VALUES ('9', '2', '7', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
 INSERT INTO `users_menu` VALUES ('10', '2', '3', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
-INSERT INTO `users_menu` VALUES ('11', '1', '7', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `users_menu` VALUES ('11', '1', '12', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
 INSERT INTO `users_menu` VALUES ('12', '8', '1', '1', '1', '1', '1', '1', '1', '1', '0', '0', '1', '1');
 INSERT INTO `users_menu` VALUES ('13', '8', '3', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
 INSERT INTO `users_menu` VALUES ('14', '8', '2', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
+INSERT INTO `users_menu` VALUES ('15', '1', '14', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
+INSERT INTO `users_menu` VALUES ('16', '1', '8', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
+INSERT INTO `users_menu` VALUES ('17', '1', '9', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
+INSERT INTO `users_menu` VALUES ('18', '1', '10', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
+INSERT INTO `users_menu` VALUES ('19', '1', '11', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
+INSERT INTO `users_menu` VALUES ('20', '1', '16', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
+INSERT INTO `users_menu` VALUES ('21', '1', '17', '1', '1', '1', '1', '1', '1', '1', '1', '0', '1', '1');
