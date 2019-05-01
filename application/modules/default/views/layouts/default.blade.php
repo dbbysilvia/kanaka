@@ -209,50 +209,17 @@
         <script src="{{ base_url() }}assets/plugins/ckeditor/adapters/jquery.js" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
         <script type="text/javascript">    
-            
             $(function() {
                 $("input[type='search']").focus();
+                $('.number').mask('000000000000000');
+                $('.datepicker').datepicker({
+                    autoclose: true,
+                    format: 'dd-mm-yyyy',
+                    todayBtn: 'linked',
+                    todayHighlight: true,
+                    clearBtn: true,
+                });
             });
-            
-            var dinterval;
-            //buat object date berdasarkan waktu di server
-
-            var serverTime = new Date(<?php print date('Y, m, d, H, i, s, 0'); ?>);
-                
-            //buat object date berdasarkan waktu di client
-            var clientTime = new Date();
-            //hitung selisih
-            var Diff = serverTime.getTime() - clientTime.getTime();    
-            //fungsi displayTime yang dipanggil di bodyOnLoad dieksekusi tiap 1000ms = 1detik
-            function displayServerTime(){
-                //buat object date berdasarkan waktu di client
-                var clientTime = new Date();
-                //buat object date dengan menghitung selisih waktu client dan server
-                var time = new Date(clientTime.getTime() + Diff);
-                
-                //ambil nilai jam
-                var sh = time.getHours().toString();
-                //ambil nilai menit
-                var sm = time.getMinutes().toString();
-                //ambil nilai detik
-                var ss = time.getSeconds().toString();
-                //tampilkan jam:menit:detik dengan menambahkan angka 0 jika angkanya cuma satu digit (0-9)
-                document.getElementById("clock").innerHTML = (sh.length==1?"0"+sh:sh) + ":" + (sm.length==1?"0"+sm:sm) + ":" + (ss.length==1?"0"+ss:ss);
-            }
-            // 1,000 means 1 second.
-            dinterval = setInterval('displayServerTime()', 1000);
-
-            function toggle(){
-                var date_param = $('#date_param').val();
-                if(date_param == '0'){
-                    $('#datetime_navbar').attr('style', 'position: fixed;left: 53px;top: 15px;font-weight: bold;color: #FFF;');
-                    $('#date_param').val('1');
-                }else{
-                    $('#datetime_navbar').attr('style', 'position: fixed;left: 249px;top: 15px;font-weight: bold;color: #FFF;');
-                    $('#date_param').val('0');
-                }
-            }
-            
         </script>
         <!-- Reminder -->
         <script type="text/javascript">
