@@ -48,7 +48,7 @@ class Dipos extends MX_Controller {
         
         if ($this->input->get('sSearch') != '') {
             $sSearch = str_replace(array('.', ','), '', $this->db->escape_str($this->input->get('sSearch')));
-            if($this->validateDate($sSearch)){
+            if((bool)strtotime($sSearch)){
                 $sSearch = date('Y-m-d',strtotime($sSearch));
             }
             $where .= " AND (";
@@ -96,10 +96,6 @@ class Dipos extends MX_Controller {
         
         $selected_data['aaData'] = $new_aa_data;
         $this->output->set_content_type('application/json')->set_output(json_encode($selected_data));
-    }
-
-    public function validateDate($date){
-        return (bool)strtotime($date);
     }
 
     public function save() {
