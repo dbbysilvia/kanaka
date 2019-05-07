@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50611
 File Encoding         : 65001
 
-Date: 2019-05-01 23:06:43
+Date: 2019-05-07 23:34:49
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,7 +24,7 @@ CREATE TABLE `reference_logs` (
   `code` int(11) NOT NULL,
   `menu` varchar(50) NOT NULL,
   PRIMARY KEY (`rowID`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of reference_logs
@@ -34,4 +34,7 @@ INSERT INTO `reference_logs` VALUES ('2', '2', 'User');
 INSERT INTO `reference_logs` VALUES ('3', '3', 'User Menus');
 INSERT INTO `reference_logs` VALUES ('4', '4', 'Brand');
 INSERT INTO `reference_logs` VALUES ('5', '5', 'Area');
-INSERT INTO `reference_logs` VALUES ('6', '6', 'DIPO');
+INSERT INTO `reference_logs` VALUES ('6', '6', 'Product');
+INSERT INTO `reference_logs` VALUES ('7', '7', 'Category Product');
+INSERT INTO `reference_logs` VALUES ('8', '8', 'DIPO');
+INSERT INTO `reference_logs` VALUES ('9', '9', 'Partner');
