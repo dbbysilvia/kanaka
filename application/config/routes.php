@@ -107,20 +107,6 @@ $route['logs/lists/(:any)'] = 'log/activities/lists/$1';
 $route['logs/detail/(:any)']	= 'log/activities/detail/$1';
 
 /**
-* BRAND
-*/
-$route['master/brand'] = 'brand/brands/index';
-$route['master/brand/pdf']	= 'brand/brands/pdf';
-$route['master/brand/excel']	= 'brand/brands/excel';
-
-/**
-* AREA
-*/
-$route['master/area'] = 'area/areas/index';
-$route['master/area/pdf']	= 'area/areas/pdf';
-$route['master/area/excel']	= 'area/areas/excel';
-
-/**
 * PRODUCT
 */
 $route['master/product'] = 'product/products/index';

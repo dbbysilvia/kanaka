@@ -83,7 +83,7 @@
       </div>
       {{ form_open(null,array('id' => 'form-dipo', 'class' => 'form-horizontal', 'autocomplete' => 'off')) }}
       <div class="modal-body">
-        <input type="hidden" name="rowID" value="">
+        <input type="hidden" name="id" value="">
         
         <div class="form-group form-md-line-input">
             <label class="col-lg-4 control-label"><?=lang('name')?><span class="text-danger">*</span></label>
@@ -167,7 +167,7 @@
         $('#modal_form').modal('show'); 
         $('.modal-title').text('<?=lang('new_dipo')?>'); 
 
-        $('[name="rowID"]').val('');
+        $('[name="id"]').val('');
     }
     toastr.options = { "positionClass": "toast-top-right", };
 
@@ -243,7 +243,7 @@
         $.getJSON('{{base_url()}}dipo/dipos/view', {id: value}, function(json, textStatus) {
             if(json.status == "success"){
                 var row = json.data;
-                $('[name="rowID"]').val(row.rowID);
+                $('[name="id"]').val(row.id);
                 $('[name="name"]').val(row.name);
                 $('[name="address"]').val(row.address);
                 $('[name="phone"]').val(row.phone);

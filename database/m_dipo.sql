@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50611
 File Encoding         : 65001
 
-Date: 2019-05-07 23:34:22
+Date: 2019-05-09 05:32:07
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,7 +20,7 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `m_dipo`;
 CREATE TABLE `m_dipo` (
-  `rowID` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL DEFAULT '0',
   `address` varchar(150) NOT NULL,
   `phone` varchar(20) NOT NULL,
@@ -43,10 +43,10 @@ CREATE TABLE `m_dipo` (
   `user_deleted` int(11) NOT NULL DEFAULT '0',
   `date_deleted` date NOT NULL DEFAULT '1901-01-01',
   `time_deleted` time NOT NULL DEFAULT '00:00:00',
-  PRIMARY KEY (`rowID`),
-  KEY `rowID` (`rowID`),
+  PRIMARY KEY (`id`),
+  KEY `rowID` (`id`),
   KEY `deleted` (`deleted`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of m_dipo
@@ -54,3 +54,4 @@ CREATE TABLE `m_dipo` (
 INSERT INTO `m_dipo` VALUES ('1', 'Bogor Store', 'Jalan Pajajaran No 10', '02518790654', 'dipobogor@kanaka.com', 'Bogor', 'Bogor Tengah', '8098898999', '-889898989', '0', '0', '1901-01-01', '00:00:00', '1', '2019-04-29', '22:10:29', '0', '1901-01-01', '00:00:00', '0', '0', '1901-01-01', '00:00:00');
 INSERT INTO `m_dipo` VALUES ('2', 'Bandung Store 1', 'Jalan Asia Afrika No 19', '02318654259', 'dipobandungstore@kanaka.com', 'Bandung Barat', 'Ciwidey', '87817283799', '-8738827319', '0', '0', '1901-01-01', '00:00:00', '1', '2019-04-30', '22:14:50', '1', '2019-05-01', '23:04:32', '1', '1', '2019-05-01', '23:05:28');
 INSERT INTO `m_dipo` VALUES ('3', 'Jakarta Store', 'Jalan Kemang 20', '0218765234', 'dipojakarta@kanaka.com', 'Jakarta Selatan', 'Pasar Minggu', '87971923719', '-8978196237', '0', '0', '1901-01-01', '00:00:00', '1', '2019-05-01', '22:25:23', '0', '1901-01-01', '00:00:00', '0', '0', '1901-01-01', '00:00:00');
+INSERT INTO `m_dipo` VALUES ('4', 'Semarang Store', 'Jalan Diponegoro No 7', '02358618236', 'diposemarang@kanaka.com', 'Semarang', 'Semarang Utara', '89815236576152', '-89123617623781', '0', '0', '1901-01-01', '00:00:00', '1', '2019-05-09', '05:25:51', '1', '2019-05-09', '05:26:07', '1', '1', '2019-05-09', '05:31:15');

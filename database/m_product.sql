@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50611
 File Encoding         : 65001
 
-Date: 2019-05-07 23:34:32
+Date: 2019-05-09 05:32:18
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,9 +20,9 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `m_product`;
 CREATE TABLE `m_product` (
-  `rowID` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL DEFAULT '',
-  `category_rowID` int(11) NOT NULL,
+  `category_id` int(11) NOT NULL,
   `sku` varchar(50) NOT NULL,
   `view_total` int(11) NOT NULL,
   `description` text NOT NULL,
@@ -41,8 +41,8 @@ CREATE TABLE `m_product` (
   `user_deleted` int(11) NOT NULL DEFAULT '0',
   `date_deleted` date NOT NULL DEFAULT '1901-01-01',
   `time_deleted` time NOT NULL DEFAULT '00:00:00',
-  PRIMARY KEY (`rowID`),
-  KEY `rowID` (`rowID`),
+  PRIMARY KEY (`id`),
+  KEY `rowID` (`id`),
   KEY `deleted` (`deleted`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

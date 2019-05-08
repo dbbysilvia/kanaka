@@ -20,7 +20,7 @@ class Dipos extends MX_Controller {
 
     public function fetch_data() {
         $database_columns = array(
-            'rowID',
+            'id',
             'name',
             'address',
             'phone',
@@ -62,7 +62,7 @@ class Dipos extends MX_Controller {
             $where .= ")";
         }
 
-        $this->datatables->set_index('rowID');
+        $this->datatables->set_index('id');
         $this->datatables->config('database_columns', $database_columns);
         $this->datatables->config('from', $from);
         $this->datatables->config('where', $where);
@@ -76,10 +76,10 @@ class Dipos extends MX_Controller {
 
             $btn_action = '';
             if($this->user_profile->get_user_access('Updated', 'dipo')){
-                $btn_action .= '<a href="javascript:void()" onclick="viewData(\'' . uri_encrypt($row->rowID) . '\')" class="btn btn-warning btn-icon-only btn-circle" data-toggle="ajaxModal" title="' . lang('update') . '"><i class="fa fa-edit"></i> </a>';
+                $btn_action .= '<a href="javascript:void()" onclick="viewData(\'' . uri_encrypt($row->id) . '\')" class="btn btn-warning btn-icon-only btn-circle" data-toggle="ajaxModal" title="' . lang('update') . '"><i class="fa fa-edit"></i> </a>';
             }
             if($this->user_profile->get_user_access('Deleted', 'dipo')){
-                $btn_action .= '<a href="javascript:void()" onclick="deleteData(\'' . uri_encrypt($row->rowID) . '\')" class="btn btn-danger btn-icon-only btn-circle" title="' . lang('delete') . '"><i class="fa fa-trash-o"></i></a>';
+                $btn_action .= '<a href="javascript:void()" onclick="deleteData(\'' . uri_encrypt($row->id) . '\')" class="btn btn-danger btn-icon-only btn-circle" title="' . lang('delete') . '"><i class="fa fa-trash-o"></i></a>';
             }
 
             $row_value[] = $row->name;
@@ -101,7 +101,7 @@ class Dipos extends MX_Controller {
     public function save() {
         if ($this->input->is_ajax_request()) {
             $user = $this->ion_auth->user()->row();
-            $id_dipo = $this->input->post('rowID');
+            $id_dipo = $this->input->post('id');
             $get_dipo = Dipo::where('name' , $this->input->post('name'))->where('deleted', 0)->first();
             if (empty($id_dipo)) {
                 if (!empty($get_dipo->name)) {
@@ -142,7 +142,7 @@ class Dipos extends MX_Controller {
                             'Longitude' => $longitude,
                         );
                         $message = "Add " . strtolower(lang('dipo')) . " " . $name . " succesfully by " . $user->full_name;
-                        $this->activity_log->create($user->id, json_encode($data_notif), NULL, NULL, $message, 'C', 8);
+                        $this->activity_log->create($user->id, json_encode($data_notif), NULL, NULL, $message, 'C', 6);
                         $status = array('status' => 'success', 'message' => lang('message_save_success'));
                     } else {
                         $status = array('status' => 'error', 'message' => lang('message_save_failed'));
@@ -197,7 +197,7 @@ class Dipos extends MX_Controller {
 
                     $data_change = array_diff_assoc($data_new, $data_old);
                     $message = "Update " . strtolower(lang('dipo')) . " " .  $model->name . " succesfully by " . $user->full_name;
-                    $this->activity_log->create($user->id, json_encode($data_new), json_encode($data_old), json_encode($data_change), $message, 'U', 8);
+                    $this->activity_log->create($user->id, json_encode($data_new), json_encode($data_old), json_encode($data_change), $message, 'U', 6);
                     $status = array('status' => 'success', 'message' => lang('message_save_success'));
                 } else {
                     $status = array('status' => 'error', 'message' => lang('message_save_failed'));
@@ -244,7 +244,7 @@ class Dipos extends MX_Controller {
                     'Longitude' => $model->longitude,
                 );
                 $message = "Delete " . strtolower(lang('dipo')) . " " .  $model->name . " succesfully by " . $user->full_name;
-                $this->activity_log->create($user->id, NULL, json_encode($data_notif), NULL, $message, 'D', 8);
+                $this->activity_log->create($user->id, NULL, json_encode($data_notif), NULL, $message, 'D', 6);
                 $status = array('status' => 'success');
             } else {
                 $status = array('status' => 'error');
@@ -257,7 +257,7 @@ class Dipos extends MX_Controller {
     }
 
     function pdf(){
-        $data['dipos'] = Dipo::where('deleted', 0)->orderBy('rowID', 'DESC')->get();
+        $data['dipos'] = Dipo::where('deleted', 0)->orderBy('id', 'DESC')->get();
         $html = $this->load->view('dipo/dipo/dipo_pdf', $data, true);
         $this->pdf_generator->generate($html, 'dipo pdf', $orientation='Portrait');
     }
@@ -265,7 +265,7 @@ class Dipos extends MX_Controller {
     function excel(){
         header("Content-type: application/octet-stream");
         header("Content-Disposition: attachment; filename=dipo.xls");
-        $data['dipos'] = Dipo::where('deleted', 0)->orderBy('rowID', 'DESC')->get();
+        $data['dipos'] = Dipo::where('deleted', 0)->orderBy('id', 'DESC')->get();
         $this->load->view('dipo/dipo/dipo_pdf', $data);
     }
 

@@ -28,8 +28,6 @@
             "application/modules/menu/models",
             "application/modules/user/models",
             "application/modules/log/models",
-            "application/modules/brand/models",
-            "application/modules/area/models",
             "application/modules/dipo/models"
         ]
     }
