@@ -26,41 +26,37 @@
 </style>
 
 <div id="header">
-    <h2><?php echo lang('dipo'); ?></h2>
+    <h2><?php echo lang('product'); ?></h2>
 </div>
 
 <div id="content" style="text-align:center;">
 <table width="100%" border="1" cellpadding="1" cellspacing="0">
 	<tr >
 		<th  align="center" width="5%" height="20px">No</th>
-		<th  align="center"><?=lang('name')?></th>
-		<th  align="center"><?=lang('address')?></th>
-		<th  align="center"><?=lang('phone')?></th>
-		<th  align="center"><?=lang('email')?></th>
-		<th  align="center"><?=lang('city')?></th>
-		<th  align="center"><?=lang('subdistrict')?></th>
-		<th  align="center"><?=lang('latitude')?></th>
-		<th  align="center"><?=lang('longitude')?></th>
+		<th  align="center"><?=lang('product_name')?></th>
+		<th  align="center"><?=lang('category')?></th>
+		<th  align="center"><?=lang('SKU')?></th>
+		<th  align="center"><?=lang('view_total')?></th>
+		<th  align="center"><?=lang('description')?></th>
+		<th  align="center"><?=lang('feature')?></th>
 		<th  align="center"><?=lang('created_date')?></th>
 	</tr>
 	<?php 
     $i=0;
-    if(count($dipos) > 0){
-	   foreach($dipos as $dipo){
+    if(count($products) > 0){
+	   foreach($products as $product){
 	   $i++;
    	?>
 					
 	<tr style="font-size:9px">
 		<td align="center"><?php echo $i;?></td>
-		<td><?=$dipo->name?></td>
-		<td><?=$dipo->address?></td>
-		<td><?=$dipo->phone?></td>
-		<td><?=$dipo->email?></td>
-		<td><?=$dipo->city?></td>
-		<td><?=$dipo->subdistrict?></td>
-		<td><?=$dipo->latitude?></td>
-		<td><?=$dipo->longitude?></td>
-		<td><?=date('d-m-Y',strtotime($dipo->date_created))?></td>
+		<td><?=$product->name?></td>
+		<td><?=$product->category_id?></td>
+		<td><?=$product->sku?></td>
+		<td><?=$product->view_total?></td>
+		<td><?=$product->description?></td>
+		<td><?=$product->feature?></td>
+		<td><?=date('d-m-Y',strtotime($product->date_created))?></td>
 	</tr>
 	<?php 
         }
